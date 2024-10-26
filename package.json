@@ -1,0 +1,51 @@
+{
+  "name": "silent-bye",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Yun",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.0.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.yunseok.silentbye",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": true
+    },
+    "files": [
+      "**/*",
+      "resources/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "resources",
+        "to": "resources"
+      }
+    ]
+  }
+}
