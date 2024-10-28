@@ -1,7 +1,7 @@
 {
   "name": "silent-bye",
   "version": "1.0.0",
-  "description": "Silent Bye app",
+  "description": "Silent Bye App",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
