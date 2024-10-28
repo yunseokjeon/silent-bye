@@ -1,9 +1,8 @@
 {
   "name": "silent-bye",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.mjs",
-  "type": "module",
+  "description": "Silent Bye app",
+  "main": "main.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,15 +24,17 @@
       ]
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "resources/icon.png"
     },
     "linux": {
       "target": "AppImage"
     },
     "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": false,
+      "oneClick": true,
+      "perMachine": true,  
+      "allowToChangeInstallationDirectory": false,      
+      "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "runAfterFinish": true
     },
